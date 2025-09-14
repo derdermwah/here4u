@@ -1,0 +1,149 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*fonts for website*/
+}
+
+ /*STYLING FOR NAVIGATION BAR*/
+header {
+    position: sticky; /*makes the navbar stick to the top of the screen when the reader scrolls*/
+    top: 0;
+    z-index: 10; /*keeps the navbar in front of all other elements*/
+    #navbar {
+        display: flex; /*turns the navbar into a flex container to line elements in a row*/
+        list-style-type: none; /*removes bullet points from list elements*/
+        background-color: #5d1bc7; /*gives navbar a background color*/
+        margin: 0; /*removes space between navbar and edges of screen*/
+        padding: 8px; /*moves the elements closer to the left and makes the hover animation cleaner*/
+        justify-content: left; /*aligns elements horizontally*/
+        align-items: center; /*aligns elements vertically*/
+        overflow: hidden; /*keeps the elements within navbar, even when hovered over*/
+        height: 75px; /*fixed height for consistent navbar vertical size*/
+        font-size: large;
+        li {
+            width: 150px; /*makes the amount of space taken consistent for all navbar elements*/
+            height: 100%;
+            #logo {
+                width: 100px; /*specific width for logo*/
+                height: auto; /*keep aspect ratio for logo consistent*/
+            }
+            a { /*makes the <a> elements consistent with their parent <li> elements*/
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                transition: transform 0.3s ease; /*smoothens animation when hovering*/
+                text-decoration: none; /*removes underline from links*/
+            }
+            a:hover {  /*changes style of elements when hovering cursor over them*/
+                background-color: #742ce7;
+                font-weight: bold;
+                transform: scale(1.25);
+            }
+        }
+    }
+}
+
+body { /*webpage styling, applies to the entire webpage except for header*/
+    background-color: #fff8f0; /*webpage base color (60%)*/
+    color: #18003b; /*text color*/
+    h1 {
+            text-align: center; /*centers the heading*/
+            background-color: #b07fff;
+            clear: both; /*keeps headings in their place, ignoring floating elements*/
+            position: sticky; /*shows what section of the page the reader is currently on*/
+            top: 90px; /*positions the sticky heading just below the navbar*/
+            z-index: 9; /*keeps the heading in front of other elements, even if they hover*/
+            margin: 0;
+            padding: 10px 0;
+    }
+    .content { /*style that applies to the entire page, except for the navbar and headings*/
+        width: 80%; /*gives margin to content*/
+        margin: 20px auto; /*centers content and adds space between content and headings*/
+        font-size: 18px; /*keeps font size consistent */
+        line-height: 1.6; /*consistent spacing for content*/
+        position: relative;
+        padding: 20px;
+        b { /*text for emphasis*/
+            font-size: 1.1em;
+            background-color: #ffb5876b; /*highlights emphasized text*/
+        }
+        p { /*normal text*/
+            font-size: 1.2em;
+            text-align: justify;
+            font-weight: 450;
+            margin: 1em 0;
+        }
+    }
+}
+
+/*STYLING FOR 'The Problem (and what's currently being done about it)'*/
+#problemandsolutions {
+    #problem {
+        width: 75%;
+        text-align: left;
+    }
+    #data { /*styling for the table of data*/
+        width: 80%;
+        float: right;
+        margin-bottom: 18px;
+        border: 5px solid #2b0070;
+        border-radius: 25px;
+        transition: transform 0.3s ease;
+    }
+    #data:hover {
+        transform: scale(1.1) rotate(-0.5deg); /*effects when hovering over data*/
+    }
+    #solutions {
+        width: 75%;
+        float: left;
+    }
+}
+
+/*STYLING FOR 'Where We Come In'*/
+#wwci {
+  position: relative; /*for absolute positioning of images*/
+  padding: 40px 200px; /*leave horizontal space for images*/
+  height: 600px;
+}
+.stockimg {
+    border-radius: 50%; /*makes images circular*/
+    object-fit: cover; /*crops images to cover the full circle without stretching*/
+    margin: 20px;
+    transition: transform 0.3s ease; /*animation when hovered over*/
+}
+.stockimg:hover {
+    transform: scale(1.1) rotate(-0.5deg); /*effects when hovering over images*/
+}
+#ymh { /*top-left image*/
+    position: absolute; /*keeps image within the 'Where We Come In' section*/
+    top: 0; /*sets image position, along with 'left: 0'*/
+    left: 0;
+    width: 300px; /*sets image size, along with height: 275px*/
+    height: 275px;
+}
+#wwciContent {
+    margin: 140px; /*centers content*/
+    font-size: 150%;
+}
+#mh { /*bottom-right image*/
+    position: absolute; /*keeps image within the 'Where We Come In' section*/
+    bottom: 0; /*sets image position, along with 'right: 0'*/
+    right: 0;
+    width: 310px; /*sets image size, along with height: 280px*/
+    height: 280px;
+}
+
+/*STYLING FOR 'Call To Action'*/
+#c2a {
+    background-color: #ff9b5c; /*section background color*/
+    color: white;
+    padding-bottom: 20px; /*adds space between end of webpage and call to action content*/
+    #c2aHeading {
+        background-color: #ff751f; /*heading background color*/
+    }
+    #c2aContent {
+        font-size: 150%;
+    }
+}

@@ -1,0 +1,180 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*fonts for website*/
+}
+
+ /*STYLING FOR NAVIGATION BAR*/
+header {
+    position: sticky; /*makes the navbar stick to the top of the screen when the reader scrolls*/
+    top: 0;
+    z-index: 10; /*keeps the navbar in front of all other elements*/
+    #navbar {
+        display: flex; /*turns the navbar into a flex container to line elements in a row*/
+        list-style-type: none; /*removes bullet points from list elements*/
+        background-color: #5d1bc7; /*gives navbar a background color*/
+        margin: 0; /*removes space between navbar and edges of screen*/
+        padding: 8px; /*moves the elements closer to the left and makes the hover animation cleaner*/
+        justify-content: left; /*aligns elements horizontally*/
+        align-items: center; /*aligns elements vertically*/
+        overflow: hidden; /*keeps the elements within navbar, even when hovered over*/
+        height: 75px; /*fixed height for consistent navbar vertical size*/
+        font-size: large;
+        li {
+            width: 150px; /*makes the amount of space taken consistent for all navbar elements*/
+            height: 100%;
+            #logo {
+                width: 100px; /*specific width for logo*/
+                height: auto; /*keep aspect ratio for logo consistent*/
+            }
+            a { /*makes the <a> elements consistent with their parent <li> elements*/
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                transition: transform 0.3s ease; /*smoothens animation when hovering*/
+                text-decoration: none; /*removes underline from links*/
+            }
+            a:hover {  /*changes style of elements when hovering cursor over them*/
+                background-color: #742ce7;
+                font-weight: bold;
+                transform: scale(1.25);
+            }
+        }
+    }
+}
+
+body { /*webpage styling, applies to the entire webpage except for header*/
+    background-color: #fff8f0; /*webpage base color (60%)*/
+    color: #18003b; /*text color*/
+    h1, h2{
+            text-align: center; /*centers the heading*/
+            clear: both; /*keeps headings in their place, ignoring floating elements*/
+            position: sticky; /*shows what section of the page the reader is currently on*/
+            top: 90px; /*positions the sticky heading just below the navbar*/
+            z-index: 9; /*keeps the heading in front of other elements, even if they hover*/
+            margin: 0;
+            padding: 10px 0;
+    }
+    h1 {
+        background-color: #b07fff;
+    }
+    h2 {
+        background-color: #bd94ffd7;
+    }
+    .content { /*style that applies to the entire page, except for the navbar and headings*/
+        width: 80%; /*gives margin to content*/
+        margin: 20px auto; /*centers content and adds space between content and headings*/
+        padding: 20px;
+        font-size: 18px; /*keeps font size consistent */
+        line-height: 1.6; /*consistent spacing for content*/
+        position: relative;
+        b { /*text for emphasis*/
+            font-size: 1.1em;
+            background-color: #ffb5876b; /*highlights emphasized text*/
+        }
+        p { /*normal text*/
+            font-size: 1.2em;
+            text-align: justify;
+            font-weight: 450;
+            margin: 1em 0;
+        }
+    }
+}
+
+/*STYLING FOR 'Who Are We?'*/
+#whoAreWe {
+    overflow: hidden;
+}
+#pfp {
+    float: right;
+    width: 300px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    margin: 10px;
+    border: 10px #ff751f solid;
+}
+#pfp:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+#founderInfo {
+    width: 75%;
+}
+
+/*STYLING FOR 'Other Advocacy Groups!'*/
+.button {
+    display: flex; /*lets me control buttons size and space*/
+    align-items: center; /*centers text vertically in button*/
+    justify-content: center; /*centers text horizontally in button*/
+    padding: 10px; 
+    width: 25%; /*makes buttons the same size, along with 'height: 30%'*/
+    height: 30%;
+    text-align: center; /*centers text in button*/
+    background-color: #ff751f;
+    color: white;
+    font-weight: bold; /*makes button text bold*/
+    border-radius: 10px; /*rounds button corners*/
+    text-decoration: none; /*removes underline from links*/
+    font-size: 200%;
+    transition: background-color 0.3s ease, transform 0.3s ease; /*smoothens animation when hovering over buttons*/
+}
+.button:hover {
+    transform: scale(1.1);
+    background-color: #d65708;
+}
+#otherGroups {
+    position: relative;
+    height: 700px;  /*make space for buttons*/
+}
+/*buttons are centered by altering their margins because using transform: translate(50%) will interfere with the transform tag in a:hover*/
+#otherGroups #topleft{ /*aligns button at the top left of the section*/
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+#otherGroups #middleright{ /*centers button at the right of the section*/
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -10%; /*centers button vertically*/
+}
+#otherGroups #centerbottom{ /*centers button at the bottom of the section*/
+    position: absolute;
+    left: 45%;
+    bottom: 30px;
+    margin-left: -12.5%; /*moves the button to the center, slightly left*/
+}
+
+/*STYLING FOR 'Where To Contact Me!'*/
+#contactMe {
+    background-color: #d6bcffa8;
+}
+#contactMeContent {
+    display: flex; /*lets me control size and space of elements*/
+    flex-direction: column; /*stacks elements vertically*/
+    height: 500px; /*makes space for elements*/
+    align-items: center; /*centers elements horizontally*/
+    justify-content: center; /*centers elements vertically*/
+}
+#email { /*gives the email element the same styling as the buttons, but without hovering effects*/
+    display: flex; /*lets me control buttons size and space*/
+    align-items: center; /*centers text vertically in button*/
+    justify-content: center; /*centers text horizontally in button*/
+    padding: 10px; 
+    width: 25%; /*makes buttons the same size, along with 'height: 30%'*/
+    height: 30%;
+    text-align: center; /*centers text in button*/
+    background-color: #ff751f;
+    color: white;
+    font-weight: bold; /*makes button text bold*/
+    border-radius: 10px; /*rounds button corners*/
+    text-decoration: none; /*removes underline from links*/
+    font-size: 200%;
+    width: 60%;
+}
+#contactMeContent .button {
+    width: 60%;       /*make buttons wider*/
+    margin: 10px 0;   /*add vertical space between buttons*/
+    font-size: 200%; 
+}
