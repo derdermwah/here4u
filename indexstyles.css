@@ -1,0 +1,219 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*fonts for website*/
+}
+
+/*Remove default page margin so header and navbar stick to edge of viewport*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff7fd; /*website background color*/
+}
+
+/*STYLING FOR NAVIGATION BAR*/
+header {
+    position: sticky; /* make navbar stick to top */
+    top: 0;
+    z-index: 10; /* stay on top of other content */
+    background-color: #520387; /* navbar background */
+}
+
+#navbar {
+    display: flex; /* horizontal layout */
+    list-style-type: none; /* remove bullets from ul */
+    margin: 0;
+    padding: 0; /* remove horizontal padding so navbar can align flush */
+    height: 75px; /* fixed navbar height */
+    align-items: center; /* vertical centering */
+    overflow: hidden;
+    font-size: 1.1rem; /* readable font size */
+}
+
+#logo {
+    width: 100px;
+}
+
+#navbar li {
+    width: 150px;
+    height: 100%;
+}
+
+#navbar a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 10px; /* soften hover edges */
+}
+
+#navbar a:hover {
+    background-color: #742ce7;
+    font-weight: bold;
+    color: #ffeadd;
+    transform: scale(1.15);
+}
+
+/*STYLING FOR MAIN CONTENT*/
+main {
+    width: 90%;
+    margin: 0px auto;
+    color: #2b0037;
+}
+
+main section {
+    clear: both; /*separate sections from each other*/
+}
+
+main h1 {
+    text-align: center;
+    background-color: #f3904a;
+    color: #feeeff;
+    margin: 0px;
+    position: sticky;
+    top: 70px;
+    padding: 5px;
+    border-radius: 8px 8px 10px 10px;
+    z-index: 5;
+}
+
+main p {
+    font-size: large;
+    padding: 2px 10px;
+}
+
+/*STYLING FOR TABLE/DATA*/
+figure {
+    float: right;
+    margin: 0px 10px;
+    position: relative;
+    bottom: 10px;
+}
+figure img {
+    width: 60vw;
+    height: auto;
+    border-radius: 20px;
+    border: 4px solid #ac4574;
+    transition: all 0.3s ease;
+}
+figure img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #db5f97;
+}
+
+/*STYLING FOR 'WHERE WE COME IN'*/
+#wwci {
+    height: 600px;
+    position: relative; /*to use position: absolute on images*/
+}
+
+#wwci p {
+    font-size: xx-large;
+    float: right;
+    width: 55%;
+    text-align: center;
+    margin: 80px 30px; /*vertically center p element*/
+}
+
+.stockimg {
+    /* adjust image size based on viewport size */
+    width: 18vw;
+    height: auto;
+    max-width: 300px;
+    min-width: 120px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%; /* make images circular */
+
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #ac4574;
+    margin: 0;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+.stockimg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #db5f97;
+}
+
+#ymh {
+    top: 75px;
+    left: 30px;
+    transform: rotate(-10deg);
+}
+#ymh:hover {
+    transform: rotate(-8deg) scale(1.03);
+}
+
+#mh {
+    top: 250px;
+    left: 250px;
+    transform: rotate(15deg);
+}
+#mh:hover {
+    transform: rotate(13deg) scale(1.03);
+}
+
+/*STYLING FOR CALL TO ACTION ASIDE*/
+aside { /*before hovering*/
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+    width: 250px;
+    height: 50px;
+    background-color: #ffeadd;
+    border: 5px solid #ac4574; 
+    border-radius: 15px;
+    padding: 10px;
+    z-index: 8;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+aside h1 {
+    text-align: center;
+    margin: 0px;
+    background-color: #f3904a;
+    color: #feeeff;
+    border-radius: 10px;
+    padding: 5px;
+}
+aside p { /*p will not be visible before hovering*/
+    text-align: justify;
+    opacity: 0;
+    transition: 0.6s ease-in;
+}
+
+aside:hover { /*after hovering*/
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #db5f97;
+}
+aside:hover p {
+    opacity: 1;
+}
+
+footer {
+    clear: both;
+    background-color: #3e125c;
+    padding: 5px;
+}
+footer h1 {
+    width: fit-content;
+    margin: auto;
+    background-color: #6f08b4;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+}
+footer p {
+    color: white;
+    padding: 5px 20px;
+}
+footer p a {
+    text-decoration: none;
+    color: white;
+}
