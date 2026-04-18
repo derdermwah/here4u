@@ -1,0 +1,156 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*fonts for website*/
+}
+
+/*Remove default page margin so header and navbar stick to edge of viewport*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff7fd; /*website background color*/
+}
+
+/*STYLING FOR NAVIGATION BAR*/
+header {
+    position: sticky; /* make navbar stick to top */
+    top: 0;
+    z-index: 10; /* stay on top of other content */
+    background-color: #520387; /* navbar background */
+}
+
+#navbar {
+    display: flex; /* horizontal layout */
+    list-style-type: none; /* remove bullets from ul */
+    margin: 0;
+    padding: 0; /* remove horizontal padding so navbar can align flush */
+    height: 75px; /* fixed navbar height */
+    align-items: center; /* vertical centering */
+    overflow: hidden;
+    font-size: 1.1rem; /* readable font size */
+}
+
+#logo {
+    width: 100px;
+}
+
+#navbar li {
+    width: 150px;
+    height: 100%;
+}
+
+#navbar a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 10px; /* soften hover edges */
+}
+
+#navbar a:hover {
+    background-color: #742ce7;
+    font-weight: bold;
+    color: #ffeadd;
+    transform: scale(1.15);
+}
+
+/*STYLING FOR MAIN CONTENT*/
+main {
+    width: 90%;
+    margin: 0px auto;
+    color: #2b0037;
+}
+
+main section {
+    clear: both; /*separate sections from each other*/
+}
+
+main h1 {
+    text-align: center;
+    background-color: #f3904a;
+    color: #feeeff;
+    margin: 0px;
+    position: sticky;
+    top: 70px;
+    padding: 5px;
+    border-radius: 8px 8px 10px 10px;
+    z-index: 5;
+}
+
+main p {
+    font-size: large;
+    padding: 2px 10px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: normal;
+    margin: 5px 0px;
+}
+
+/*STYLING FOR GET INVOLVED*/
+#getinvolved article {
+    width: fit-content;
+    height: auto;
+    margin: 10px auto 30px;
+}
+#getinvolved a {
+    display: inline-block;
+    text-align: center;
+    width: 280px;
+    padding: 15px 25px;
+    margin: 20px 40px;
+    background-color: #ff9cc9;
+    border: #834963 2px solid;
+    color: #2b0037;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+#getinvolved a:hover {
+    background-color: #db5f97;
+    color: #ffeadd;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+#getinvolved a:active {
+    transform: scale(1.05);
+}
+
+/*STYLING FOR PORTFOLIO*/
+#portfolio div {
+    position: relative;
+    width: fit-content;
+    margin: 20px 0px;
+    padding: 10px;
+    border: 2px solid #ac4574;
+    border-radius: 10px;
+    background-color: #ffe7ef;
+}
+#portfolio div:hover {
+    box-shadow: 0px 0px 10px #db5f97;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+#portfolio div:nth-of-type(odd) {
+    margin-left: auto;
+    margin-right: 20px;
+}
+#portfolio div:nth-of-type(even) {
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+#portfolio div img {
+    width: 650px;
+}
+
+#portfolio div p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+}

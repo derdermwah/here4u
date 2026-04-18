@@ -1,0 +1,163 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*fonts for website*/
+}
+
+/*Remove default page margin so header and navbar stick to edge of viewport*/
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(signupwp.avif); /*website background */
+    background-repeat: no-repeat;
+    background-size :cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*STYLING FOR NAVIGATION BAR*/
+header {
+    position: sticky; /* make navbar stick to top */
+    top: 0;
+    z-index: 10; /* stay on top of other content */
+    background-color: #520387; /* navbar background */
+}
+
+#navbar {
+    display: flex; /* horizontal layout */
+    list-style-type: none; /* remove bullets from ul */
+    margin: 0;
+    padding: 0; /* remove horizontal padding so navbar can align flush */
+    height: 75px; /* fixed navbar height */
+    align-items: center; /* vertical centering */
+    overflow: hidden;
+    font-size: 1.1rem; /* readable font size */
+}
+
+#logo {
+    width: 100px;
+}
+
+#navbar li {
+    width: 150px;
+    height: 100%;
+}
+
+#navbar a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 10px; /* soften hover edges */
+}
+
+#navbar a:hover {
+    background-color: #742ce7;
+    font-weight: bold;
+    color: #ffeadd;
+    transform: scale(1.15);
+}
+
+/*STYLING FOR MAIN CONTENT*/
+main {
+    background-color: #fff7fd;
+    color: #2b0037;
+    border: 2px solid #520387;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+main section {
+    clear: both; /*separate sections from each other*/
+    margin: 20px 30%; /*center sections and add spacing on sides*/
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    text-align: center;
+    background-color: #f3904a;
+    color: #feeeff;
+    margin: 0px 10px 20px 10px;
+    position: sticky;
+    padding: 5px;
+    border-radius: 8px 8px 10px 10px;
+    z-index: 5;
+}
+
+main p {
+    font-size: large;
+    padding: 2px 0px;
+}
+
+main form {
+    margin: 0px 10px;
+}
+
+main label {
+    text-align: left;
+    font-size: large;
+    padding: 2px 0px;
+}
+
+main span {
+    color: red;
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: #520387;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main button:hover {
+    background-color: #742ce7;
+    transform: scale(1.1);
+}
+
+main input {
+    padding: 10px;
+    border: 1px solid #520387;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+main input:focus {
+    outline: none;
+    border-color: #742ce7;
+    box-shadow: 0 0 5px #742ce7;
+}
+
+main select {
+    padding: 10px;
+    border: 1px solid #520387;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+main div:first-of-type {
+    margin-top: 15px;
+}
+
+div label {
+    font-size: 1rem;
+}
+
+form button:first-of-type {
+    float: right;
+}

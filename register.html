@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="registerstyles.css">
+    <script src="registerscript.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="navbar">
+                <li><a href="index.html"><img alt="here4u. logo" src="here4u..png" id="logo"></a></li>
+                <li><a href="search.html">Resources</a></li>
+                <li><a href="community.html">Get Involved</a></li>
+                <li><a href="info.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Volunteer Registration</h1>
+        <form id="signup" onsubmit="return validateForm()">
+            <section>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError"></span>
+            </section>
+
+            <section>
+                <label for="bday">Birthdate:</label>
+                <input type="date" id="bday" name="bday" required>
+                <span class="error" id="bdayError"></span>
+            </section>
+            
+            <section>
+                <label>Sex:</label>
+                <div>
+                    <input type="radio" id="male" name="sex" value="male" required>
+                    <label for="male">Male</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="female" name="sex" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="other" name="sex" value="other" required>
+                    <label for="other">Prefer not to say</label>
+                </div>
+                
+                <span class="error" id="sexError"></span>
+            </section>
+
+            <section>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </section>
+
+            <section>
+                <label for="user">Username:</label>
+                <input type="text" id="user" name="user" required>
+                <span class="error" id="userError"></span>
+            </section>
+
+            <section>
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pass" required>
+                <span class="error" id="passError"></span>
+            </section>
+
+            <section>
+                <label for="confirm">Confirm Password:</label>
+                <input type="password" id="confirm" name="confirm" required>
+                <span class="error" id="confirmError"></span>
+            </section>
+
+            <section>
+                <label for="pronouns">Preferred Pronouns:</label>
+                <select id="pronouns" name="pronouns" required>
+                    <option value="">Select...</option>
+                    <option value="he/him">He/Him</option>
+                    <option value="she/her">She/Her</option>
+                    <option value="they/them">They/Them</option>
+                    <option value="other">Other</option>
+                </select>
+                <span class="error" id="pronounsError"></span>
+            </section>
+
+            <section>
+                <label>Reasons for Volunteering:</label>
+                <div>
+                    <input type="checkbox" id="personal" name="reason" value="personal">
+                    <label for="personal">Personal Experience</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="community" name="reason" value="community">
+                    <label for="community">Community Support</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="other" name="reason" value="other">
+                    <label for="other">Other</label>
+                </div>
+
+                    <span class="error" id="reasonError"></span>
+            </section>
+
+            <section>
+                <label for="region">Region:</label>
+                <select id="region" name="region" required>
+                    <option value="">Select...</option>
+                    <option value="luzon">Luzon</option>
+                    <option value="visayas">Visayas</option>
+                    <option value="mindanao">Mindanao</option>
+                </select>
+                <span class="error" id="regionError"></span>
+            </section>
+
+            <button type="submit" class="submit-btn">Help us be "here4u" &gt;</button>
+            <button type="button" class="back-btn" onclick="window.location.href='index.html'">&lt; Home</button>
+            <p id="success"></p>
+        </form>
+    </main>
+</body>
+</html>
